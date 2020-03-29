@@ -1,0 +1,7 @@
+.Ingredients {
+    height: 35px;
+    width: 35px;
+    background-color: tomato;
+    border: 1px solid red;
+    border-radius: 100%;
+}

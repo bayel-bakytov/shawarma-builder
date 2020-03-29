@@ -1,0 +1,10 @@
+.ShawarmaIngredients {
+     border: 3px solid black;
+     background-color: cornflowerblue;
+     width: 500px;
+     height: 500px;
+     display: flex;
+     flex-flow: row wrap;
+     align-content: flex-start;
+     overflow: hidden;
+}
