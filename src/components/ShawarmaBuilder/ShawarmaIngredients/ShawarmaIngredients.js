@@ -6,6 +6,8 @@ import classes from "./ShawarmaIngredients.module.css";
 
 export default () => (
         <div className={classes.ShawarmaIngredients}>
-          <Ingredients />
+          <Ingredients type="tomato"/>
+          <Ingredients type="cucumber"/>
+          <Ingredients type="french-fries"/>
         </div>  
 );

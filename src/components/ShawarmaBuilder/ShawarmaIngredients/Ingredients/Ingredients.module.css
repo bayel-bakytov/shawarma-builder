@@ -1,7 +1,21 @@
 .Ingredients {
     height: 35px;
     width: 35px;
+    box-sizing: border-box;
+}
+.tomato {
     background-color: tomato;
     border: 1px solid red;
     border-radius: 100%;
+}
+.cucumber {
+    background-color: rgb(57, 235, 57);
+    border: 2px solid green;
+    border-radius: 100%;
+}
+.frenchFries{
+    height: 40px;
+    width: 15px;
+    background-color: rgb(236, 154, 47);
+    border: 2px solid brown;
 }
