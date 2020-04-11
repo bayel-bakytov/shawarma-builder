@@ -3,29 +3,43 @@ import ShawarmaIngredients from "../../components/ShawarmaBuilder/ShawarmaIngred
 import classes from "./ShawarmaBuilder.module.css";
 import IngredientsControls from "../../components/ShawarmaBuilder/IngredientsControls/IngredientsControls";
 
+const PRICES = {
+  cucumber: 20,
+  tomato: 20,
+  frenchFries: 20,
+};
+
 export default () => {
   const [ingredients, setIngredients] = useState({
-    cucumber: 5,
-    tomato: 5,
-    frenchFries: 6,
+    cucumber: 0,
+    tomato: 0,
+    frenchFries: 0,
   });
 
+  const [price, setPrice] = useState(100);
+
   function addIngredient(type) {
-    const newIngredients = {...ingredients};
+    const newIngredients = { ...ingredients };
     newIngredients[type]++;
     setIngredients(newIngredients);
+
+    const newPrice = price + PRICES[type];
+    setPrice(newPrice);
   }
 
   function removeIngredient(type) {
-    if(ingredients[type] >= 1){
-    const newIngredients = {...ingredients};
-    newIngredients[type]--;
-    setIngredients(newIngredients);
+    if (ingredients[type] >= 1) {
+      const newIngredients = { ...ingredients };
+      newIngredients[type]--;
+      setIngredients(newIngredients);
+
+      const newPrice = price - PRICES[type];
+      setPrice(newPrice);
     }
   }
   return (
     <div className={classes.ShawarmaBuilder}>
-      <ShawarmaIngredients ingredients={ingredients} />
+      <ShawarmaIngredients price={price} ingredients={ingredients} />
       <IngredientsControls
         addIngredient={addIngredient}
         removeIngredient={removeIngredient}

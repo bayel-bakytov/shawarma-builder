@@ -1,10 +1,16 @@
-.ShawarmaIngredients {
-     border: 3px solid black;
-     background-color: rgb(86, 126, 201);
-     width: 500px;
-     height: 500px;
-     display: flex;
-     flex-flow: row wrap;
-     align-content: flex-start;
-     overflow: hidden;
+.ShawarmaIngredients .pita {
+  border: 3px solid black;
+  background-color: rgb(86, 126, 201);
+  width: 540px;
+  height: 540px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-flow: wrap;
+  overflow: hidden;
+  border-radius: 100%;
+}
+.ShawarmaIngredients .price {
+  font-size: 30px;
+  font-weight: bold;
 }
