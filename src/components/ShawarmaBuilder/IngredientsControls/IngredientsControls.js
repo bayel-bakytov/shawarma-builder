@@ -8,12 +8,13 @@ const CONTROLS = [
   { label: "French-Fries", type: "frenchFries" },
 ];
 
-export default ({ addIngredient, removeIngredient }) => {
+export default ({ ingredients, addIngredient, removeIngredient }) => {
   const controlsOutput = CONTROLS.map((control) => (
     <IngredientControl
       control={control}
       addIngredient={addIngredient}
       removeIngredient={removeIngredient}
+      disabled={ingredients[control.type] === 0}
     />
   ));
 

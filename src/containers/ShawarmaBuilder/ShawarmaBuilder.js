@@ -37,10 +37,12 @@ export default () => {
       setPrice(newPrice);
     }
   }
+
   return (
     <div className={classes.ShawarmaBuilder}>
       <ShawarmaIngredients price={price} ingredients={ingredients} />
       <IngredientsControls
+        ingredients={ingredients}
         addIngredient={addIngredient}
         removeIngredient={removeIngredient}
       />
