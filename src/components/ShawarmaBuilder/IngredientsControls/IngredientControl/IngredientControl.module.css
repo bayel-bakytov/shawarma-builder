@@ -1,0 +1,14 @@
+.IngredientControl {
+  box-sizing: border-box;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+}
+.IngredientControl button {
+  width: 25px;
+  height: 25px;
+  border: none;
+  background-color: white;
+  color: green;
+  font-weight: bold;
+  border-radius: 50%;
+}
