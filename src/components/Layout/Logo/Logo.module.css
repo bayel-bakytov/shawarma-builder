@@ -1,6 +1,14 @@
-
+.Logo {
+  display: flex;
+  align-items: center;
+}
 .Logo img {
-    margin: 5px;
-    height: 80px;
-    width: 80px;
+  margin: 5px;
+  height: 80px;
+  width: 80px;
+}
+.Logo span {
+  font-family: "Permanent Marker", cursive;
+  color: white;
+  font-size: 2rem;
 }
