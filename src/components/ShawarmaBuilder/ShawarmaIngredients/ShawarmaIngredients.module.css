@@ -9,6 +9,7 @@
   flex-flow: wrap;
   overflow: hidden;
   border-radius: 100%;
+  position: relative;
 }
 .ShawarmaIngredients .price {
   font-size: 30px;
