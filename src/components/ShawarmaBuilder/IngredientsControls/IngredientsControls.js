@@ -6,6 +6,9 @@ const CONTROLS = [
   { label: "Tomato", type: "tomato" },
   { label: "Cucumber", type: "cucumber" },
   { label: "French-Fries", type: "frenchFries" },
+  { label: "meat", type: "meat" },
+  { label: "salad", type: "salad" },
+  { label: "cheese", type: "cheese" },
 ];
 
 export default ({ ingredients, addIngredient, removeIngredient }) => {

@@ -22,6 +22,15 @@ export default ({ type }) => {
     case "tomato":
       IngredientsClasses.push(classes.tomato);
       break;
+    case "salad":
+      IngredientsClasses.push(classes.salad);
+      break;
+    case "cheese":
+      IngredientsClasses.push(classes.chesee);
+      break;
+    case "meat":
+      IngredientsClasses.push(classes.meat);
+      break;
     case "cucumber":
       IngredientsClasses.push(classes.cucumber);
       break;
