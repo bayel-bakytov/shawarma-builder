@@ -6,14 +6,15 @@ const CONTROLS = [
   { label: "Tomato", type: "tomato" },
   { label: "Cucumber", type: "cucumber" },
   { label: "French-Fries", type: "frenchFries" },
-  { label: "meat", type: "meat" },
-  { label: "salad", type: "salad" },
-  { label: "cheese", type: "cheese" },
+  { label: "Meat", type: "meat" },
+  { label: "Salad", type: "salad" },
+  { label: "Cheese", type: "cheese" },
 ];
 
 export default ({ ingredients, addIngredient, removeIngredient }) => {
   const controlsOutput = CONTROLS.map((control) => (
     <IngredientControl
+      key={control.type}
       control={control}
       addIngredient={addIngredient}
       removeIngredient={removeIngredient}
