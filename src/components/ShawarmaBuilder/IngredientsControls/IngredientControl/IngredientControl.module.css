@@ -2,6 +2,14 @@
   box-sizing: border-box;
   margin-bottom: 0.5rem;
   margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+.IngredientControl .label{
+  color: white;
+  font-family: cursive;
+  padding:10px 5px;
+  font-size: 20px;
 }
 .IngredientControl button {
   width: 25px;
@@ -11,4 +19,10 @@
   color: green;
   font-weight: bold;
   border-radius: 50%;
+}
+.IngredientControl button:disabled {
+  opacity: .5;
+}
+.IngredientControl button:not(:disabled):hover {
+  opacity: .8;
 }
