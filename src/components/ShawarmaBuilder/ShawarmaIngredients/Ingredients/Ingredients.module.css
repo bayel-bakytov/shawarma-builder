@@ -1,41 +1,27 @@
 .Ingredients {
-  height: 45px;
-  width: 45px;
+  height: 50px;
+  width: 60px;
   box-sizing: border-box;
-  position: absolute;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
 }
 .tomato {
-  background-color: tomato;
-  border: 1px solid red;
-  border-radius: 100%;
+ background-image: url(../../../../assets/tomato.svg);
 }
 .cucumber {
-  background-color: rgb(57, 235, 57);
-  border: 2px solid green;
-  border-radius: 100%;
+  background-image: url(../../../../assets/cucumber.svg);
 }
 .frenchFries {
-  height: 40px;
-  width: 15px;
-  background-color: rgb(236, 154, 47);
-  border: 2px solid brown;
+  background-image: url(../../../../assets/frenchFries.svg);
 }
 .cheese {
-  width: 0;
-  height: 0;
-  border-bottom: solid 50px yellow;
-  border-left: 25px solid transparent;
-  border-right: 25px solid transparent;
+  background-image: url(../../../../assets/cheese.svg);
 }
 .meat {
-  height: 40px;
-  width: 40px;
-  background-color: brown;
-  border-radius: 100%;
+  background-image: url(../../../../assets/meat.svg);
 }
 .salad {
-  height: 40px;
-  width: 40px;
-  background-color: green;
-  border-radius: 100%;
+  background-image: url(../../../../assets/salad.svg);
 }

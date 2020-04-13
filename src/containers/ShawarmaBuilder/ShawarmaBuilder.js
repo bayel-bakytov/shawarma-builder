@@ -7,6 +7,9 @@ const PRICES = {
   cucumber: 20,
   tomato: 20,
   frenchFries: 20,
+  cheese:20,
+  salad:20,
+  meat:20,
 };
 
 export default () => {
