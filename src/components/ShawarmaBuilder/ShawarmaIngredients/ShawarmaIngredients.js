@@ -13,7 +13,9 @@ export default ({ price, ingredients }) => {
 
   return (
     <div className={classes.ShawarmaIngredients}>
-      <div className={classes.pita}>{ingredientsOutput}</div>
+      <div className={classes.pita}>
+        <div className={classes.ingredientPita}>{ingredientsOutput}</div>
+      </div>
       <div className={classes.price}>Total price: {price} som</div>
     </div>
   );

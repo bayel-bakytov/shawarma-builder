@@ -2,13 +2,11 @@ import React from "react";
 import classes from "./Ingredients.module.css";
 
 export default ({ type }) => {
-  const IngredientsClasses = [classes.Ingredients,
-   classes[type]
-  ];
+  const IngredientsClasses = [classes.Ingredients, classes[type]];
 
   let stylePos = null;
   const getPosition = (ir) => {
-    const pd = 540;
+    const pd = 370;
     const pr = pd / 2;
 
     const ix = Math.round(Math.random() * pd);
