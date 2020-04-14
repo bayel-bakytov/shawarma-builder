@@ -6,10 +6,17 @@
   align-items: center;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   flex-flow: wrap;
   overflow: hidden;
   border-radius: 100%;
+}
+.ShawarmaIngredients .ingredientPita{
   position: relative;
+  width: 400px;
+  height: 400px;
+  border-radius: 100%;
+  opacity: 1;
 }
 .ShawarmaIngredients .price {
   font-size: 30px;
