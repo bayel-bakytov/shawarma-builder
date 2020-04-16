@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import ShawarmaIngredients from "../../components/ShawarmaBuilder/ShawarmaIngredients/ShawarmaIngredients";
 import classes from "./ShawarmaBuilder.module.css";
 import IngredientsControls from "../../components/ShawarmaBuilder/IngredientsControls/IngredientsControls";
+import Modal from "../../components/UI/Modal/Modal";
+import OrderSummary from "../../components/ShawarmaBuilder/OrderSummary/OrderSummary";
 
 const PRICES = {
   cucumber: 20,
@@ -63,6 +65,9 @@ export default () => {
         addIngredient={addIngredient}
         removeIngredient={removeIngredient}
       />
+      <Modal>
+      <OrderSummary ingredients={ingredients}/>
+      </Modal>
     </div>
   );
 };
