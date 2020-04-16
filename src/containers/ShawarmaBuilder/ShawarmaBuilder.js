@@ -39,6 +39,10 @@ export default () => {
     setIsOrdering(true);
   }
 
+  function cancelOrder() {
+    setIsOrdering(false);
+  }
+
   function addIngredient(type) {
     const newIngredients = { ...ingredients };
     newIngredients[type]++;
@@ -71,8 +75,8 @@ export default () => {
         addIngredient={addIngredient}
         removeIngredient={removeIngredient}
       />
-      <Modal show={isOrdering}>
-      <OrderSummary ingredients={ingredients}/>
+      <Modal show={isOrdering} hideCallback={cancelOrder}>
+        <OrderSummary ingredients={ingredients} />
       </Modal>
     </div>
   );
