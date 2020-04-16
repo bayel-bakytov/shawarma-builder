@@ -1,15 +1,23 @@
 .Modal {
-     width: 90%;
-     padding: 1rem;
-     position: absolute;
-     z-index: 500;
-     top: 100px;
-     background-color: white;
-     border: 1px solid black;
+  width: 90%;
+  padding: 1rem;
+  position: absolute;
+  z-index: 500;
+  top: 100px;
+  background-color: white;
+  border: 1px solid black;
+
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+  transform: translateY(-100vh);
+}
+.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-@media (min-width:600px) {
-    .Modal{
-        width: 500px;
-    }
+@media (min-width: 600px) {
+  .Modal {
+    width: 500px;
+  }
 }

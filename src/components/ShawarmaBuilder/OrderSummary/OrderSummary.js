@@ -24,6 +24,7 @@ export default ({ ingredients }) => {
       <h2>Your order</h2>
       <p>Congratulations! You'will a best shawarma-ingredients of all times!</p>
       <ul>{ingredientsOutput}</ul>
+      <p>Would you like to checkout?</p>
     </div>
   );
 };
