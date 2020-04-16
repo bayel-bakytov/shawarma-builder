@@ -2,9 +2,7 @@
   height: 50px;
   width: 60px;
   box-sizing: border-box;
-  position: fixed;
-  top: 0;
-  left: 0;
+  
   background-repeat: no-repeat;
 }
 .tomato {

@@ -10,6 +10,7 @@
   flex-flow: wrap;
   overflow: hidden;
   border-radius: 100%;
+  
 }
 .ShawarmaIngredients .ingredientPita{
   position: relative;
