@@ -11,7 +11,7 @@ const LABELS = {
   cheese: "Cheese",
 };
 
-export default ({ ingredients, cancelOrder, finishOrder }) => {
+export default ({ ingredients, cancelOrder, finishOrder, price }) => {
   const ingredientsOutput = Object.keys(ingredients)
     .filter((ingredient) => ingredients[ingredient] > 0)
     .map((ingredient) => (
@@ -25,6 +25,7 @@ export default ({ ingredients, cancelOrder, finishOrder }) => {
       <h2>Your order</h2>
       <p>Congratulations! You'will a best shawarma-ingredients of all times!</p>
       <ul>{ingredientsOutput}</ul>
+      <p>Total price: {price.toFixed(2)} som</p>
       <p>Would you like to checkout?</p>
       <Button click={finishOrder} green>
         Checkout

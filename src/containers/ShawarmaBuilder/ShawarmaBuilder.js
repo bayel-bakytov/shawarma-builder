@@ -6,12 +6,12 @@ import Modal from "../../components/UI/Modal/Modal";
 import OrderSummary from "../../components/ShawarmaBuilder/OrderSummary/OrderSummary";
 
 const PRICES = {
-  cucumber: 20,
-  tomato: 20,
-  frenchFries: 20,
-  cheese: 20,
-  salad: 20,
-  meat: 20,
+  cucumber: 3.5,
+  tomato: 4.5,
+  frenchFries: 11.5,
+  cheese: 8.4,
+  salad: 6.5,
+  meat: 9.5,
 };
 
 export default () => {
@@ -81,6 +81,7 @@ export default () => {
       />
       <Modal show={isOrdering} hideCallback={cancelOrder}>
         <OrderSummary
+          price={price}
           ingredients={ingredients}
           cancelOrder={cancelOrder}
           finishOrder={finishOrder}
