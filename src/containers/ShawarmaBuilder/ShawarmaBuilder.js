@@ -43,6 +43,10 @@ export default () => {
     setIsOrdering(false);
   }
 
+  function finishOrder() {
+    alert("you finich order");
+  }
+
   function addIngredient(type) {
     const newIngredients = { ...ingredients };
     newIngredients[type]++;
@@ -76,7 +80,11 @@ export default () => {
         removeIngredient={removeIngredient}
       />
       <Modal show={isOrdering} hideCallback={cancelOrder}>
-        <OrderSummary ingredients={ingredients} />
+        <OrderSummary
+          ingredients={ingredients}
+          cancelOrder={cancelOrder}
+          finishOrder={finishOrder}
+        />
       </Modal>
     </div>
   );
