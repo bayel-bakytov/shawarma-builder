@@ -1,6 +1,7 @@
 import React from "react";
 import classes from "./IngredientsControls.module.css";
 import IngredientControl from "./IngredientControl/IngredientControl";
+import Button from "../../UI/Button/Button";
 
 const CONTROLS = [
   { label: "Tomato", type: "tomato" },
@@ -31,13 +32,9 @@ export default ({
   return (
     <div className={classes.IngredientsControls}>
       {controlsOutput}
-      <button
-        onClick={startOrder}
-        disabled={!canOrder}
-        className={classes.orderButton}
-      >
-        ORDER
-      </button>
+      <Button click={startOrder} enabled={canOrder}>
+        Order
+      </Button>
     </div>
   );
 };

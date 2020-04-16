@@ -1,5 +1,6 @@
 import React from "react";
 import classes from "./OrderSummary.module.css";
+import Button from "../../UI/Button/Button";
 
 const LABELS = {
   tomato: "Tomato",
@@ -25,6 +26,8 @@ export default ({ ingredients }) => {
       <p>Congratulations! You'will a best shawarma-ingredients of all times!</p>
       <ul>{ingredientsOutput}</ul>
       <p>Would you like to checkout?</p>
+      <Button>Checkout</Button>
+      <Button>Cancel</Button>
     </div>
   );
 };
