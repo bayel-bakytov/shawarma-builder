@@ -3,9 +3,9 @@
   align-items: center;
 }
 .Logo img {
-  margin: 5px;
-  height: 80px;
-  width: 80px;
+  margin: 10px;
+  height: 70px;
+  width: 70px;
 }
 .Logo span {
   font-family: "Permanent Marker", cursive;

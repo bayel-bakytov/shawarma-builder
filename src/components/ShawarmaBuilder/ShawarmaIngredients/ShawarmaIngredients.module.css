@@ -1,8 +1,10 @@
 .ShawarmaIngredients .pita {
   border: 3px solid black;
   background-color: rgb(235, 235, 137);
-  width: 540px;
-  height: 540px;
+  margin: 0 auto;
+  
+  width:  300px;
+  height: 300px;
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -14,8 +16,8 @@
 }
 .ShawarmaIngredients .ingredientPita{
   position: relative;
-  width: 400px;
-  height: 400px;
+  width: 250px;
+  height: 250px;
   border-radius: 100%;
   opacity: 1;
 }

@@ -6,7 +6,7 @@ export default ({ type }) => {
 
   let stylePos = null;
   const getPosition = (ir) => {
-    const pd = 370;
+    const pd = 250;
     const pr = pd / 2;
 
     const ix = Math.round(Math.random() * pd);
