@@ -1,8 +1,7 @@
 .Ingredients {
-  height: 35px;
-  width: 45px;
+  height: 40px;
+  width: 50px;
   box-sizing: border-box;
-  
   background-repeat: no-repeat;
 }
 .tomato {
@@ -22,4 +21,10 @@
 }
 .salad {
   background-image: url(../../../../assets/salad.svg);
+}
+@media (max-width:600px){
+  .Ingredients{
+    width: 25px;
+    height: 35px;
+  }
 }
