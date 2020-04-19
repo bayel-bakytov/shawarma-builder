@@ -7,6 +7,8 @@ export default ({ children }) => (
   <div className={classes.Layout}>
     <Toolbar />
     <Drawer />
-    {children}
+    <main>
+       {children}
+    </main>
   </div>
 );
