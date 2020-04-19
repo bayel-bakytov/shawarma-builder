@@ -11,7 +11,7 @@
   color: white;
   font-size: 16px;
   border-top: 5px solid transparent;
-  border: none;
+ 
   transition: all .3s ease-in-out;
 }
 .NavigationItem a:hover {
@@ -24,6 +24,7 @@
   }
   @media (max-width: 670px) {
     .NavigationItem a{
+        border: none;
         border-left:5px solid transparent;
     }
 }
