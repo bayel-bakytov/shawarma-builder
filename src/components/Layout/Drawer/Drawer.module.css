@@ -8,8 +8,18 @@
   height: 100%;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
 }
+
+.Open {
+  transform: translateX(0);
+}
+
+.Close {
+  transform: translateX(-250px);
+}
+
 @media (min-width: 670px) {
   .Drawer  {
     display: none;
   }
+
 }
