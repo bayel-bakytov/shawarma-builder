@@ -4,11 +4,11 @@
 }
 .Logo img {
   margin: 10px;
-  height: 70px;
-  width: 70px;
+  height: 60px;
+  width: 60px;
 }
 .Logo span {
   font-family: "Permanent Marker", cursive;
   color: white;
-  font-size: 2rem;
+  font-size: 30px;
 }
