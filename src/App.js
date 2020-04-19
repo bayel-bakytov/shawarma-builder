@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Layout from './components/Layout/Layout';
+import Layout from './containers/Layout/Layout';
 import ShawarmaBuilder from './containers/ShawarmaBuilder/ShawarmaBuilder';
 
 export default  () => {
