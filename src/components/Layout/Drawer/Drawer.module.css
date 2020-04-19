@@ -1,15 +1,15 @@
-.Drawer {
-    width: 250px;
-    background-color: rgb(238, 238, 30);
-    position: fixed;
-    z-index: 250;
-    top: 0;
-    left: 0;
-    height: 100%;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+.Drawer .content {
+  width: 250px;
+  background-color: rgb(238, 238, 30);
+  position: fixed;
+  z-index: 250;
+  top: 0;
+  left: 0;
+  height: 100%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
 }
 @media (min-width: 670px) {
-    .Drawer{
-       display: none;
-    }
+  .Drawer  {
+    display: none;
+  }
 }
