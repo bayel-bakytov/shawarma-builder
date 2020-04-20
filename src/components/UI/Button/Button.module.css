@@ -1,13 +1,20 @@
 .Button {
     border: none;
-    background-color: white;
-    color: green;
+    background-color: green;
+    color: white;
     font-weight: bold;
     border-radius: 20px;
     cursor: pointer;
     padding: 5px 15px;
     font-size: 18px;
     text-transform: uppercase;
+    text-shadow:0 -2px #669644;
+    border-bottom: 5px solid #4e812a;
+    transition: all 1s ;
+  }
+  .Button:active{
+    border-bottom: 1px solid;
+    transform: translate(0px,5px);
   }
   .Button:disabled {
     opacity: .5;
