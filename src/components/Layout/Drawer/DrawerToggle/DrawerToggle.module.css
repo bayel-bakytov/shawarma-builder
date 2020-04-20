@@ -9,7 +9,7 @@
 .DrawerToggle div {
   height: 3px;
   width: 30px;
-  background-color: white;
+  background-color: rgba(37, 36, 36, 0.534);
 }
 .DrawerToggle div:not(:last-child) {
   margin-bottom: 5px;
