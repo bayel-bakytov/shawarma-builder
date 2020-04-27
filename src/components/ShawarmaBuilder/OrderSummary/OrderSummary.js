@@ -9,6 +9,7 @@ const LABELS = {
   meat: "Meat",
   salad: "Salad",
   cheese: "Cheese",
+  onion: "Onion",
 };
 
 export default ({ ingredients, cancelOrder, finishOrder, price }) => {

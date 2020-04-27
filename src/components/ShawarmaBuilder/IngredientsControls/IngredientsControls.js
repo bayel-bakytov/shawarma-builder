@@ -10,6 +10,7 @@ const CONTROLS = [
   { label: "Meat", type: "meat" },
   { label: "Salad", type: "salad" },
   { label: "Cheese", type: "cheese" },
+  { label: "Onion", type: "onion" },
 ];
 
 export default ({

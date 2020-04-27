@@ -38,6 +38,9 @@ export default ({ type }) => {
     default:
       IngredientsClasses.push(classes.frenchFries);
       break;
+    case "onion":
+      IngredientsClasses.push(classes.onion);
+      break;
   }
 
   const position = getPosition(50 / 2);

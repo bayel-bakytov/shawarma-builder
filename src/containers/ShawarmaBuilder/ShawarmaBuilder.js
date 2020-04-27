@@ -12,6 +12,7 @@ const PRICES = {
   cheese: 8.4,
   salad: 6.5,
   meat: 9.5,
+  onion: 3,
 };
 
 export default () => {
@@ -22,6 +23,7 @@ export default () => {
     cheese: 0,
     salad: 0,
     meat: 0,
+    onion: 0,
   });
 
   const [price, setPrice] = useState(100);

@@ -3,9 +3,12 @@
   width: 50px;
   box-sizing: border-box;
   background-repeat: no-repeat;
+  position: relative;
+  top: 0;
+  left: 0;
 }
 .tomato {
- background-image: url(../../../../assets/tomato.svg);
+  background-image: url(../../../../assets/tomato.svg);
 }
 .cucumber {
   background-image: url(../../../../assets/cucumber.svg);
@@ -22,8 +25,13 @@
 .salad {
   background-image: url(../../../../assets/salad.svg);
 }
-@media (max-width:600px){
-  .Ingredients{
+.onion {
+  background-image: url(../../../../assets/onion.png);
+  height: 50px;
+  width: 50px;
+}
+@media (max-width: 600px) {
+  .Ingredients {
     width: 25px;
     height: 35px;
   }
