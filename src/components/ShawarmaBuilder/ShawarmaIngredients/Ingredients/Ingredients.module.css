@@ -34,7 +34,19 @@
 }
 @media (max-width: 600px) {
   .Ingredients {
-    width: 25px;
+    width: 40px;
+    height: 40px;
+  }
+  .tomato {
+    width: 45px;
+    height: 45px;
+  }
+  .cucumber {
+    width: 35px;
     height: 35px;
+  }
+  .frenchFries {
+    width: 45px;
+    height: 45px;
   }
 }
