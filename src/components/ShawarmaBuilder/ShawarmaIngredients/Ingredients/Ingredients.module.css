@@ -9,6 +9,8 @@
 }
 .tomato {
   background-image: url(../../../../assets/tomato.svg);
+  width: 55px;
+  height: 55px;
 }
 .cucumber {
   background-image: url(../../../../assets/cucumber.svg);
