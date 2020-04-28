@@ -1,7 +1,7 @@
-import React from "react";
+import React, { memo } from "react";
 import classes from "./Ingredients.module.css";
 
-export default ({ type }) => {
+export default memo(({ type }) => {
   const IngredientsClasses = [classes.Ingredients, classes[type]];
 
   let stylePos = null;
@@ -52,4 +52,4 @@ export default ({ type }) => {
   };
 
   return <div style={stylePos} className={IngredientsClasses.join(" ")}></div>;
-};
+});
