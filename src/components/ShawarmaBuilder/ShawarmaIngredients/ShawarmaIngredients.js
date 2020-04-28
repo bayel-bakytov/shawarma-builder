@@ -1,5 +1,5 @@
 import React from "react";
-import Ingredients from "./Ingredients/Ingredients";
+import Ingredient from "./Ingredient/Ingredient";
 import classes from "./ShawarmaIngredients.module.css";
 
 export default ({ price, ingredients }) => {
@@ -7,7 +7,7 @@ export default ({ price, ingredients }) => {
 
   Object.keys(ingredients).forEach((type) => {
     for (let i = 0; i < ingredients[type]; i++) {
-      ingredientsOutput.push(<Ingredients key={type + i} type={type} />);
+      ingredientsOutput.push(<Ingredient key={type + i} type={type} />);
     }
   });
 

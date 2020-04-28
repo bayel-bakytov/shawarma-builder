@@ -1,8 +1,8 @@
 import React, { memo } from "react";
-import classes from "./Ingredients.module.css";
+import classes from "./Ingredient.module.css";
 
 export default memo(({ type }) => {
-  const IngredientsClasses = [classes.Ingredients, classes[type]];
+  const IngredientsClasses = [classes.Ingredient, classes[type]];
 
   let stylePos = null;
   const getPosition = (ir) => {
