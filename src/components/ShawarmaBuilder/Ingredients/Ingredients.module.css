@@ -1,4 +1,4 @@
-.ShawarmaIngredients .pita {
+.Ingredients .pita {
   border: 3px solid rgb(221, 221, 94);
   background-color: rgb(235, 235, 137);
 
@@ -14,21 +14,21 @@
   overflow: hidden;
   border-radius: 100%;
 }
-.ShawarmaIngredients .ingredientPita {
+.Ingredients .ingredientPita {
   position: relative;
   width: 360px;
   height: 360px;
   border-radius: 100%;
   opacity: 1;
 }
-.ShawarmaIngredients .price {
+.Ingredients .price {
   font-size: 30px;
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
 }
 @media (max-width: 500px) {
-  .ShawarmaIngredients .pita {
+  .Ingredients .pita {
     width: 300px;
     height: 300px;
   }

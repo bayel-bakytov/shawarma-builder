@@ -1,6 +1,6 @@
 import React from "react";
 import Ingredient from "./Ingredient/Ingredient";
-import classes from "./ShawarmaIngredients.module.css";
+import classes from "./Ingredients.module.css";
 
 export default ({ price, ingredients }) => {
   let ingredientsOutput = [];
@@ -12,7 +12,7 @@ export default ({ price, ingredients }) => {
   });
 
   return (
-    <div className={classes.ShawarmaIngredients}>
+    <div className={classes.Ingredients}>
       <div className={classes.pita}>
         <div className={classes.ingredientPita}>{ingredientsOutput}</div>
       </div>

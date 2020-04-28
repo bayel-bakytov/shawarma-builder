@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ShawarmaIngredients from "../../components/ShawarmaBuilder/ShawarmaIngredients/ShawarmaIngredients";
+import Ingredients from "../../components/ShawarmaBuilder/Ingredients/Ingredients";
 import classes from "./ShawarmaBuilder.module.css";
 import IngredientsControls from "../../components/ShawarmaBuilder/IngredientsControls/IngredientsControls";
 import Modal from "../../components/UI/Modal/Modal";
@@ -73,7 +73,7 @@ export default () => {
 
   return (
     <div className={classes.ShawarmaBuilder}>
-      <ShawarmaIngredients price={price} ingredients={ingredients} />
+      <Ingredients price={price} ingredients={ingredients} />
       <IngredientsControls
         startOrder={startOrder}
         canOrder={canOrder}
