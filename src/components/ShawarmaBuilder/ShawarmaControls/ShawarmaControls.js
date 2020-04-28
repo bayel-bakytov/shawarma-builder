@@ -1,6 +1,6 @@
 import React from "react";
-import classes from "./IngredientsControls.module.css";
-import IngredientControl from "./IngredientControl/IngredientControl";
+import classes from "./ShawarmaControls.module.css";
+import ShawarmaControl from "./ShawarmaControl/ShawarmaControl";
 import Button from "../../UI/Button/Button";
 
 const CONTROLS = [
@@ -21,7 +21,7 @@ export default ({
   startOrder,
 }) => {
   const controlsOutput = CONTROLS.map((control) => (
-    <IngredientControl
+    <ShawarmaControl
       key={control.type}
       control={control}
       addIngredient={addIngredient}
@@ -31,7 +31,7 @@ export default ({
   ));
 
   return (
-    <div className={classes.IngredientsControls}>
+    <div className={classes.ShawarmaControls}>
       {controlsOutput}
       <Button click={startOrder} enabled={canOrder}>
         Order

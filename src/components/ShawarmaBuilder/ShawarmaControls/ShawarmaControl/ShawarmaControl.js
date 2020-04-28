@@ -1,9 +1,9 @@
 import React from "react";
-import classes from "./IngredientControl.module.css";
+import classes from "./ShawarmaControl.module.css";
 
 export default ({ control, addIngredient, removeIngredient, disabled }) => {
   return (
-    <div className={classes.IngredientControl}>
+    <div className={classes.ShawarmaControl}>
       <button
         className={classes.less}
         onClick={() => removeIngredient(control.type)}

@@ -1,17 +1,17 @@
-.IngredientControl {
+.ShawarmaControl {
   box-sizing: border-box;
   margin-bottom: 0.5rem;
   margin-top: 0.5rem;
   display: flex;
   align-items: center;
 }
-.IngredientControl .label{
+.ShawarmaControl .label {
   color: white;
   font-family: cursive;
-  padding:10px 5px;
+  padding: 10px 5px;
   font-size: 20px;
 }
-.IngredientControl button {
+.ShawarmaControl button {
   width: 25px;
   height: 25px;
   border: none;
@@ -21,9 +21,9 @@
   border-radius: 50%;
   cursor: pointer;
 }
-.IngredientControl button:disabled {
-  opacity: .5;
+.ShawarmaControl button:disabled {
+  opacity: 0.5;
 }
-.IngredientControl button:not(:disabled):hover {
-  opacity: .8;
+.ShawarmaControl button:not(:disabled):hover {
+  opacity: 0.8;
 }
