@@ -5,6 +5,7 @@ import ShawarmaControls from "../../components/ShawarmaBuilder/ShawarmaControls/
 import Modal from "../../components/UI/Modal/Modal";
 import OrderSummary from "../../components/ShawarmaBuilder/OrderSummary/OrderSummary";
 import axios from "../../axios";
+import Spinner from "../../components/UI/Spinner/Spinner";
 
 const PRICES = {
   cucumber: 3.5,
@@ -89,7 +90,7 @@ export default () => {
       setPrice(newPrice);
     }
   }
-  let orderSummary = "Loading.....";
+  let orderSummary = <Spinner />;
   if (!loading) {
     orderSummary = (
       <OrderSummary
