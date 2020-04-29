@@ -4,6 +4,7 @@ import classes from "./ShawarmaBuilder.module.css";
 import ShawarmaControls from "../../components/ShawarmaBuilder/ShawarmaControls/ShawarmaControls";
 import Modal from "../../components/UI/Modal/Modal";
 import OrderSummary from "../../components/ShawarmaBuilder/OrderSummary/OrderSummary";
+import axios from "../../axios";
 
 const PRICES = {
   cucumber: 3.5,
@@ -46,7 +47,20 @@ export default () => {
   }
 
   function finishOrder() {
-    alert("you finich order");
+    const order = {
+      ingredients: ingredients,
+      price: price,
+      delivery: "Fast",
+      customer: {
+        name: "Bayel",
+        phone: "0500500500",
+        address: {
+          street: "Kojenkozova 170",
+          city: "Karakol",
+        },
+      },
+    };
+    axios.post("/orders.json", order).then((response) => console.log(response));
   }
 
   function addIngredient(type) {
