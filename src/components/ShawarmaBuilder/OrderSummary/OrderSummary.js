@@ -16,7 +16,7 @@ export default ({ ingredients, cancelOrder, finishOrder, price }) => {
   const ingredientsOutput = Object.keys(ingredients)
     .filter((ingredient) => ingredients[ingredient] > 0)
     .map((ingredient) => (
-      <li>
+      <li key={ingredient}>
         {LABELS[ingredient]}: {ingredients[ingredient]}
       </li>
     ));
