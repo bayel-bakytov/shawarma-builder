@@ -8,16 +8,24 @@ const withErrorHandler = (WrappendComponent, axios) => {
       setError(false);
     }
     useEffect(() => {
-      axios.interceptors.response.use(
+      const requestInterceptor = axios.interceptors.request.use((response) => {
+        setError(false);
+        return response;
+      });
+      const responseInterceptor = axios.interceptors.response.use(
         (response) => response,
         (error) => setError(error)
       );
+      return () => {
+        axios.interceptors.request.detach(requestInterceptor);
+        axios.interceptors.response.detach(responseInterceptor);
+      };
     }, []);
 
     return (
       <>
         <Modal show={error} hideCallback={hideModal}>
-          No signal
+          {error ? error.message : "Unknown error"}
         </Modal>
         <WrappendComponent {...props} />;
       </>
