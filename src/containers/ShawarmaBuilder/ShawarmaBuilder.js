@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Ingredients from "../../components/ShawarmaBuilder/Ingredients/Ingredients";
 import classes from "./ShawarmaBuilder.module.css";
 import ShawarmaControls from "../../components/ShawarmaBuilder/ShawarmaControls/ShawarmaControls";
@@ -19,15 +19,7 @@ const PRICES = {
 };
 
 export default withErrorHandler(() => {
-  const [ingredients, setIngredients] = useState({
-    cucumber: 0,
-    tomato: 0,
-    frenchFries: 0,
-    cheese: 0,
-    salad: 0,
-    meat: 0,
-    onion: 0,
-  });
+  const [ingredients, setIngredients] = useState(null);
 
   const [price, setPrice] = useState(100);
   const [canOrder, setCanOrder] = useState(false);
@@ -91,6 +83,29 @@ export default withErrorHandler(() => {
       setPrice(newPrice);
     }
   }
+
+  useEffect(() => {
+    axios
+      .get("/ingredients.json")
+      .then((response) => setIngredients(response.data));
+  }, []);
+
+  let output = <Spinner />;
+  if (ingredients) {
+    output = (
+      <>
+        <Ingredients price={price} ingredients={ingredients} />
+        <ShawarmaControls
+          startOrder={startOrder}
+          canOrder={canOrder}
+          ingredients={ingredients}
+          addIngredient={addIngredient}
+          removeIngredient={removeIngredient}
+        />
+      </>
+    );
+  }
+
   let orderSummary = <Spinner />;
   if (!loading && isOrdering) {
     orderSummary = (
@@ -104,14 +119,7 @@ export default withErrorHandler(() => {
   }
   return (
     <div className={classes.ShawarmaBuilder}>
-      <Ingredients price={price} ingredients={ingredients} />
-      <ShawarmaControls
-        startOrder={startOrder}
-        canOrder={canOrder}
-        ingredients={ingredients}
-        addIngredient={addIngredient}
-        removeIngredient={removeIngredient}
-      />
+      {output}
       <Modal show={isOrdering} hideCallback={cancelOrder}>
         {orderSummary}
       </Modal>
