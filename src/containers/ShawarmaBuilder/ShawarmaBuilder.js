@@ -6,6 +6,7 @@ import Modal from "../../components/UI/Modal/Modal";
 import OrderSummary from "../../components/ShawarmaBuilder/OrderSummary/OrderSummary";
 import axios from "../../axios";
 import Spinner from "../../components/UI/Spinner/Spinner";
+import withErrorHandler from "../../hoc/withErrorHandler/withErrorHandler";
 
 const PRICES = {
   cucumber: 3.5,
@@ -17,7 +18,7 @@ const PRICES = {
   onion: 3,
 };
 
-export default () => {
+export default withErrorHandler(() => {
   const [ingredients, setIngredients] = useState({
     cucumber: 0,
     tomato: 0,
@@ -63,7 +64,7 @@ export default () => {
       },
     };
     setLoading(true);
-    axios.post("/orders.json", order).then((response) => {
+    axios.post("/orders", order).then((response) => {
       setLoading(false);
       setIsOrdering(false);
     });
@@ -116,4 +117,4 @@ export default () => {
       </Modal>
     </div>
   );
-};
+}, axios);
