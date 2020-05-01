@@ -7,18 +7,18 @@ const withErrorHandler = (WrappendComponent, axios) => {
     function hideModal() {
       setError(false);
     }
+    const requestInterceptor = axios.interceptors.request.use((response) => {
+      setError(false);
+      return response;
+    });
+    const responseInterceptor = axios.interceptors.response.use(
+      (response) => response,
+      (error) => setError(error)
+    );
     useEffect(() => {
-      const requestInterceptor = axios.interceptors.request.use((response) => {
-        setError(false);
-        return response;
-      });
-      const responseInterceptor = axios.interceptors.response.use(
-        (response) => response,
-        (error) => setError(error)
-      );
       return () => {
-        axios.interceptors.request.detach(requestInterceptor);
-        axios.interceptors.response.detach(responseInterceptor);
+        axios.interceptors.request.eject(requestInterceptor);
+        axios.interceptors.response.eject(responseInterceptor);
       };
     }, []);
 

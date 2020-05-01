@@ -87,7 +87,8 @@ export default withErrorHandler(() => {
   useEffect(() => {
     axios
       .get("/ingredients.json")
-      .then((response) => setIngredients(response.data));
+      .then((response) => setIngredients(response.data))
+      .catch((error) => {});
   }, []);
 
   let output = <Spinner />;
