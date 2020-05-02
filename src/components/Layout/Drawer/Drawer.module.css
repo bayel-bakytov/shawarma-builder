@@ -1,13 +1,13 @@
 .Drawer .content {
   width: 250px;
-  background-color: #c1c8e4;
+  background-color: tomato;
   position: fixed;
   z-index: 250;
   top: 0;
   left: 0;
   height: 100%;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
-  transition: transform .4s ease-in;
+  transition: transform 0.4s ease-in;
 }
 
 .Open {
@@ -19,8 +19,7 @@
 }
 
 @media (min-width: 670px) {
-  .Drawer  {
+  .Drawer {
     display: none;
   }
-
 }
