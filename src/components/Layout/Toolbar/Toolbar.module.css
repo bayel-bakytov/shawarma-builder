@@ -2,7 +2,8 @@
   display: flex;
   justify-content: space-between;
 
-  background-color: #c1c8e4;
+  background-color: tomato;
+  box-shadow: 0px 0px 10px rgb(73, 72, 72);
 }
 .Toolbar nav {
   display: none;

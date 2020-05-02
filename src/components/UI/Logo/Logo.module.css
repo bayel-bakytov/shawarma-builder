@@ -3,12 +3,11 @@
   align-items: center;
 }
 .Logo img {
-  margin: 10px;
-  height: 60px;
-  width: 60px;
+  height: 80px;
+  width: 80px;
 }
 .Logo span {
   font-family: "Permanent Marker", cursive;
-  color: rgba(37, 36, 36, 0.534);
-  font-size: 25px;
+  color: yellow;
+  font-size: 30px;
 }
