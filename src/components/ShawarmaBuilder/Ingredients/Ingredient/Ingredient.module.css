@@ -1,5 +1,5 @@
 .Ingredient {
-  height: 40px;
+  height: 50px;
   width: 50px;
   box-sizing: border-box;
   background-repeat: no-repeat;
@@ -9,8 +9,8 @@
 }
 .tomato {
   background-image: url(../../../../assets/tomato.svg);
-  width: 55px;
-  height: 55px;
+  width: 60px;
+  height: 60px;
 }
 .cucumber {
   background-image: url(../../../../assets/cucumber.svg);
@@ -23,6 +23,8 @@
 }
 .meat {
   background-image: url(../../../../assets/meat.svg);
+  width: 60px;
+  height: 60px;
 }
 .salad {
   background-image: url(../../../../assets/salad.svg);
