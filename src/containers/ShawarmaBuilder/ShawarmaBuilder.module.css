@@ -1,5 +1,5 @@
-.ShawarmaBuilder{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+.ShawarmaBuilder {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }

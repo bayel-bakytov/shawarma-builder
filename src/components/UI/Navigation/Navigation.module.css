@@ -6,9 +6,8 @@
   flex-direction: row;
 }
 @media (max-width: 670px) {
-    .Navigation{
-        margin: 10px 0;
-        flex-direction: column;
-    }
+  .Navigation {
+    margin: 10px 0;
+    flex-direction: column;
+  }
 }
-

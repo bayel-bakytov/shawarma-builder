@@ -1,13 +1,13 @@
-import React from 'react';
-import './App.css';
-import Layout from './containers/Layout/Layout';
-import ShawarmaBuilder from './containers/ShawarmaBuilder/ShawarmaBuilder';
+import React from "react";
+import "./App.css";
+import Layout from "./containers/Layout/Layout";
+import ShawarmaBuilder from "./containers/ShawarmaBuilder/ShawarmaBuilder";
 
-export default  () => {
+export default () => {
   return (
     <div className="App">
       <Layout>
-        <ShawarmaBuilder/>
+        <ShawarmaBuilder />
       </Layout>
     </div>
   );

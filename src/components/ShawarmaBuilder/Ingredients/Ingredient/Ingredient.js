@@ -2,9 +2,7 @@ import React, { memo } from "react";
 import classes from "./Ingredient.module.css";
 
 export default memo(({ type }) => {
-  const IngredientsClasses = [classes.Ingredient, classes[type]];
-
-  let stylePos = null;
+  let stylePosition = null;
   const getPosition = (ir) => {
     const pd = 360;
     const pr = pd / 2;
@@ -17,7 +15,7 @@ export default memo(({ type }) => {
 
     return distance < pr ? { x: ix - ir, y: iy - ir } : getPosition(ir);
   };
-
+  const IngredientsClasses = [classes.Ingredient, classes[type]];
   switch (type) {
     case "tomato":
       IngredientsClasses.push(classes.tomato);
@@ -45,12 +43,14 @@ export default memo(({ type }) => {
 
   const position = getPosition(50 / 2);
 
-  stylePos = {
+  stylePosition = {
     position: "absolute",
     top: position.y + "px",
     left: position.x + "px",
     transform: "rotate(" + Math.random() * 360 + "deg" + ")",
   };
 
-  return <div style={stylePos} className={IngredientsClasses.join(" ")}></div>;
+  return (
+    <div style={stylePosition} className={IngredientsClasses.join(" ")}></div>
+  );
 });

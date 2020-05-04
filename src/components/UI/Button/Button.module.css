@@ -1,32 +1,32 @@
 .Button {
-    border: none;
-    background-color: green;
-    color: white;
-    font-weight: bold;
-    border-radius: 20px;
-    cursor: pointer;
-    padding: 5px 15px;
-    font-size: 18px;
-    text-transform: uppercase;
-    text-shadow:0 -2px #669644;
-    border-bottom: 5px solid #4e812a;
-    transition: all 1s ;
-  }
-  .Button:active{
-    border-bottom: 1px solid;
-    transform: translate(0px,5px);
-  }
-  .Button:disabled {
-    opacity: .5;
-  }
-  .Button:not(:disabled):hover {
-    opacity: .8;
-  }
-  .green {
-   background-color: rgb(55, 146, 55);
-   color: white;
-  }
-  .red {
-   background-color: red;
-   color: white;
-  }
+  border: none;
+  background-color: green;
+  color: white;
+  font-weight: bold;
+  border-radius: 20px;
+  cursor: pointer;
+  padding: 5px 15px;
+  font-size: 18px;
+  text-transform: uppercase;
+  text-shadow: 0 -2px #669644;
+  border-bottom: 5px solid #4e812a;
+  transition: all 1s;
+}
+.Button:active {
+  border-bottom: 1px solid;
+  transform: translate(0px, 5px);
+}
+.Button:disabled {
+  opacity: 0.5;
+}
+.Button:not(:disabled):hover {
+  opacity: 0.8;
+}
+.green {
+  background-color: rgb(55, 146, 55);
+  color: white;
+}
+.red {
+  background-color: red;
+  color: white;
+}

@@ -4,7 +4,9 @@ import NavigationItem from "./NavigationItem/NavigationItem";
 
 export default () => (
   <ul className={classes.Navigation}>
-    <NavigationItem url="/" active>Shawarma Builder</NavigationItem>
+    <NavigationItem url="/" active>
+      Shawarma Builder
+    </NavigationItem>
     <NavigationItem url="/checkout">Checkout</NavigationItem>
   </ul>
 );
