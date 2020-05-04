@@ -6,6 +6,7 @@
   position: relative;
   top: 0;
   left: 0;
+  background-size: 100%;
 }
 .tomato {
   background-image: url(../../../../assets/tomato.svg);
