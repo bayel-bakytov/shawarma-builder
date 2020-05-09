@@ -16,6 +16,7 @@ const PRICES = {
   salad: 6.5,
   meat: 9.5,
   onion: 3,
+  ketchup: 1,
 };
 
 export default withErrorHandler(() => {

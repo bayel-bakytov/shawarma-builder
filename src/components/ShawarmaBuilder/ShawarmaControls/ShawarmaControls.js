@@ -11,6 +11,7 @@ const CONTROLS = [
   { label: "Salad", type: "salad" },
   { label: "Cheese", type: "cheese" },
   { label: "Onion", type: "onion" },
+  { label: "Ketchup", type: "ketchup" },
 ];
 
 export default ({

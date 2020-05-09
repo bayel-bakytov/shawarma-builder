@@ -39,6 +39,9 @@ export default memo(({ type }) => {
     case "onion":
       IngredientsClasses.push(classes.onion);
       break;
+    case "ketchup":
+      IngredientsClasses.push(classes.ketchup);
+      break;
   }
 
   const position = getPosition(50 / 2);

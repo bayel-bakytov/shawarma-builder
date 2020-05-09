@@ -2,7 +2,7 @@
   border: 3px solid red;
   background-color: tomato;
   width: 280px;
-  height: 500px;
+  height: 700px;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;

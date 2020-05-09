@@ -3,7 +3,7 @@
   width: 50px;
   box-sizing: border-box;
   background-repeat: no-repeat;
-  position: relative;
+  position: absolute;
   top: 0;
   left: 0;
   background-size: 100%;
@@ -35,6 +35,12 @@
   height: 55px;
   width: 55px;
 }
+.ketchup {
+  background-image: url(../../../../assets/ketchup.svg);
+  width: 150px;
+  height: 150px;
+}
+
 @media (max-width: 600px) {
   .Ingredient {
     width: 40px;
