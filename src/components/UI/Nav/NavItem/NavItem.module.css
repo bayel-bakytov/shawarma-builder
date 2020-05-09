@@ -1,4 +1,4 @@
-.NavigationItem a {
+.NavItem a {
   display: flex;
   align-items: center;
   padding: 8px;
@@ -14,16 +14,16 @@
 
   transition: all 0.3s ease-in-out;
 }
-.NavigationItem a:hover {
+.NavItem a:hover {
   border-color: white;
   background-color: rgba(255, 255, 2555, 0.3);
 }
-.NavigationItem .active {
+.NavItem .active {
   border-color: white;
   background-color: rgba(255, 255, 2555, 0.1);
 }
 @media (max-width: 670px) {
-  .NavigationItem a {
+  .NavItem a {
     border: none;
     border-left: 5px solid transparent;
   }
