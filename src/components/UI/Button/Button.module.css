@@ -9,7 +9,7 @@
   font-size: 18px;
   text-transform: uppercase;
   text-shadow: 0 -2px #669644;
-  border-bottom: 5px solid #4e812a;
+
   transition: all 1s;
   margin-bottom: 8px;
 }
@@ -26,8 +26,10 @@
 .green {
   background-color: rgb(55, 146, 55);
   color: white;
+  border-bottom: 5px solid rgb(86, 206, 96);
 }
 .red {
   background-color: red;
   color: white;
+  border-bottom: 5px solid rgb(233, 68, 68);
 }
