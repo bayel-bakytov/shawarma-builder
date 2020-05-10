@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
 import Ingredients from "../../components/ShawarmaBuilder/Ingredients/Ingredients";
 import classes from "./ShawarmaBuilder.module.css";
 import ShawarmaControls from "../../components/ShawarmaBuilder/ShawarmaControls/ShawarmaControls";
@@ -21,11 +22,11 @@ const PRICES = {
 
 export default withErrorHandler(() => {
   const [ingredients, setIngredients] = useState(null);
-
   const [price, setPrice] = useState(10);
   const [canOrder, setCanOrder] = useState(false);
   const [isOrdering, setIsOrdering] = useState(false);
   const [loading, setLoading] = useState(false);
+  const history = useHistory();
 
   function checkCanOrder(ingredients) {
     const total = Object.keys(ingredients).reduce((total, ingredient) => {
@@ -43,23 +44,17 @@ export default withErrorHandler(() => {
   }
 
   function finishOrder() {
-    const order = {
-      ingredients: ingredients,
-      price: price,
-      delivery: "Fast",
-      customer: {
-        name: "Bayel",
-        phone: "0500500500",
-        address: {
-          street: "Kojenkozova 170",
-          city: "Karakol",
-        },
-      },
-    };
-    setLoading(true);
-    axios.post("/orders.json", order).then((response) => {
-      setLoading(false);
-      setIsOrdering(false);
+    const queryParams = Object.keys(ingredients).map(
+      (ingredient) =>
+        encodeURIComponent(ingredient) +
+        "=" +
+        encodeURIComponent(ingredients[ingredient])
+    );
+    queryParams.push("price" + encodeURIComponent(price.toFixed(2)));
+
+    history.push({
+      pathname: "/checkout",
+      search: queryParams.join("&"),
     });
   }
 
