@@ -11,6 +11,7 @@
   text-shadow: 0 -2px #669644;
   border-bottom: 5px solid #4e812a;
   transition: all 1s;
+  margin-bottom: 8px;
 }
 .Button:active {
   border-bottom: 1px solid;

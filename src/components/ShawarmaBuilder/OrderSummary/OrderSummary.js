@@ -10,6 +10,7 @@ const LABELS = {
   salad: "Salad",
   cheese: "Cheese",
   onion: "Onion",
+  ketchup: "Ketchup",
 };
 
 export default ({ ingredients, cancelOrder, finishOrder, price }) => {

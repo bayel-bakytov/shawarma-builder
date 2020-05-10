@@ -44,7 +44,7 @@ export default memo(({ type }) => {
       break;
   }
 
-  const position = getPosition(50 / 2);
+  const position = getPosition(80 / 2);
 
   stylePosition = {
     position: "absolute",
