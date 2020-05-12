@@ -1,21 +1,28 @@
-import React from "react";
-import { useHistory } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { useHistory, useLocation, Route } from "react-router-dom";
 import CheckoutSummary from "../../components/Checkout/CheckoutSummary/CheckoutSummary";
 import classes from "./Checkout.module.css";
 
 export default () => {
   const history = useHistory();
-  const ingredients = {
-    tomato: 1,
-    cucumber: 1,
-    frenchFries: 1,
-    cheese: 1,
-    meat: 1,
-    salad: 1,
-    onion: 1,
-    ketchup: 1,
-  };
-  const price = 155;
+  const location = useLocation();
+
+  const [ingredients, setIngredients] = useState({});
+  const [price, setPrice] = useState(0);
+
+  useEffect(() => {
+    const query = new URLSearchParams(location.search);
+    const newIngredients = {};
+    query.forEach((value, key) => {
+      if (key === "price") {
+        setPrice(+value);
+      } else {
+        newIngredients[key] = +value;
+      }
+    });
+    setIngredients(newIngredients);
+  }, []);
+
   function checkoutCancel() {
     history.push("/builder");
   }

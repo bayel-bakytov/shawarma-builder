@@ -50,7 +50,7 @@ export default withErrorHandler(() => {
         "=" +
         encodeURIComponent(ingredients[ingredient])
     );
-    queryParams.push("price" + encodeURIComponent(price.toFixed(2)));
+    queryParams.push("price=" + encodeURIComponent(price.toFixed(2)));
 
     history.push({
       pathname: "/checkout",
