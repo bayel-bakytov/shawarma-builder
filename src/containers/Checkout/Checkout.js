@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useHistory, useLocation, Route } from "react-router-dom";
+import axios from "../../axios";
 import CheckoutSummary from "../../components/Checkout/CheckoutSummary/CheckoutSummary";
 import classes from "./Checkout.module.css";
 import CheckoutForm from "./CheckoutForm/CheckoutForm";
+import withErroHandler from "../../hoc/withErrorHandler/withErrorHandler";
 
-export default () => {
+export default withErroHandler(() => {
   const history = useHistory();
   const location = useLocation();
 
@@ -27,9 +29,13 @@ export default () => {
   function checkoutCancel() {
     history.push("/builder");
   }
+
   function checkoutContinue() {
     history.push("/checkout/form");
   }
+
+  function checkoutFinich(data) {}
+
   return (
     <div className={classes.Checkout}>
       <CheckoutSummary
@@ -39,8 +45,8 @@ export default () => {
         checkoutContinue={checkoutContinue}
       />
       <Route path="/checkout/form">
-        <CheckoutForm />
+        <CheckoutForm checkoutFinich={checkoutFinich} />
       </Route>
     </div>
   );
-};
+}, axios);

@@ -2,3 +2,22 @@
   display: flex;
   flex-flow: column nowrap;
 }
+.CheckoutForm input,
+.CheckoutForm select {
+  padding: 0.5rem 1em;
+  border: 0;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3) inset;
+  border-radius: 1em;
+  font-size: 1.2rem;
+  min-width: 400px;
+  margin-bottom: 0.5em;
+}
+
+.CheckoutForm input:focus,
+.CheckoutForm select:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.7) inset;
+}
+.CheckoutForm button {
+  margin: 1em 0;
+}
