@@ -5,6 +5,7 @@ import CheckoutSummary from "../../components/Checkout/CheckoutSummary/CheckoutS
 import classes from "./Checkout.module.css";
 import CheckoutForm from "./CheckoutForm/CheckoutForm";
 import withErroHandler from "../../hoc/withErrorHandler/withErrorHandler";
+import Spinner from "../../components/UI/Spinner/Spinner";
 
 export default withErroHandler(() => {
   const history = useHistory();
@@ -12,6 +13,7 @@ export default withErroHandler(() => {
 
   const [ingredients, setIngredients] = useState({});
   const [price, setPrice] = useState(0);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const query = new URLSearchParams(location.search);
@@ -34,7 +36,24 @@ export default withErroHandler(() => {
     history.push("/checkout/form");
   }
 
-  function checkoutFinich(data) {}
+  function checkoutFinich(data) {
+    setLoading(true);
+    axios
+      .post("/orders.json", {
+        ingredients,
+        price,
+        details: data,
+      })
+      .then((response) => {
+        setLoading(false);
+        history.replace("/");
+      });
+  }
+
+  let formOutput = <Spinner />;
+  if (!loading) {
+    formOutput = <CheckoutForm checkoutFinich={checkoutFinich} />;
+  }
 
   return (
     <div className={classes.Checkout}>
@@ -44,9 +63,7 @@ export default withErroHandler(() => {
         checkoutCancel={checkoutCancel}
         checkoutContinue={checkoutContinue}
       />
-      <Route path="/checkout/form">
-        <CheckoutForm checkoutFinich={checkoutFinich} />
-      </Route>
+      <Route path="/checkout/form">{formOutput}</Route>
     </div>
   );
 }, axios);
