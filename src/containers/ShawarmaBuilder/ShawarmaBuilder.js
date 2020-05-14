@@ -115,6 +115,7 @@ export default withErrorHandler(() => {
   }
   return (
     <div className={classes.ShawarmaBuilder}>
+      <h1>Build your shawarma</h1>
       {output}
       <Modal show={isOrdering} hideCallback={cancelOrder}>
         {orderSummary}

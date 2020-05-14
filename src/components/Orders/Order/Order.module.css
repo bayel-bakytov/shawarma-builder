@@ -1,0 +1,24 @@
+.Order {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  border-radius: 1em;
+  padding: 1em;
+  margin-bottom: 1em;
+  flex-basis: 400px;
+  flex-grow: 1;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+.Order .details {
+  font-size: 1.1rem;
+}
+.Order .price {
+  font-size: 1.5rem;
+  margin-bottom: 3px;
+}
+.Order .ingredient {
+  border: 1px solid gray;
+  border-radius: 0.4em;
+  padding: 0.4em;
+  display: inline-block;
+  margin: 0 0.3em 0.3em 0;
+}
