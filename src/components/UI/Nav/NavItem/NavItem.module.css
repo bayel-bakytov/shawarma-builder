@@ -3,23 +3,19 @@
   align-items: center;
   padding: 8px;
   height: 80px;
-
-  box-sizing: border-box;
-
   text-decoration: none;
   font-family: "Merienda", cursive;
   color: #e4002b;
   font-size: 20px;
-  border-top: 5px solid transparent;
-
-  transition: all 0.3s ease-in-out;
+  border-bottom: 3px solid transparent;
+  transition: all 0.4s ease-in-out;
 }
 .NavItem a:hover {
-  border-color: white;
+  border-color: #e4002b;
   background-color: rgba(255, 255, 2555, 0.3);
 }
 .NavItem .active {
-  border-color: white;
+  border-color: #e4002b;
   background-color: rgba(255, 255, 2555, 0.1);
 }
 @media (max-width: 670px) {

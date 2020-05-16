@@ -1,6 +1,5 @@
 .Ingredients .pita {
-  border: 3px solid rgb(221, 221, 94);
-  background-color: rgb(235, 235, 137);
+  background-color: rgb(233, 233, 145);
 
   margin: 0 auto;
   width: 400px;
@@ -20,6 +19,22 @@
   height: 360px;
   border-radius: 100%;
   opacity: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-flow: column nowrap;
+}
+.ingredientPita > .linePita {
+  width: 280px;
+  height: 5px;
+  border-radius: 5px;
+  background-color: #75472d;
+}
+.ingredientPita > .line_Pita {
+  width: 200px;
+  height: 5px;
+  border-radius: 5px;
+  background-color: #75472d;
 }
 .Ingredients .price {
   font-size: 30px;

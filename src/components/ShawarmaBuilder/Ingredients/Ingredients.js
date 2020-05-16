@@ -14,7 +14,14 @@ export default ({ price, ingredients }) => {
   return (
     <div className={classes.Ingredients}>
       <div className={classes.pita}>
-        <div className={classes.ingredientPita}>{ingredientsOutput}</div>
+        <div className={classes.ingredientPita}>
+          <div className={classes.line_Pita}></div>
+          <div className={classes.linePita}></div>
+          <div className={classes.linePita}></div>
+          <div className={classes.linePita}></div>
+          <div className={classes.line_Pita}></div>
+          {ingredientsOutput}
+        </div>
       </div>
       <div className={classes.price}>Price: {price.toFixed(2)} som</div>
     </div>
