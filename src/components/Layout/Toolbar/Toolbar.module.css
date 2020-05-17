@@ -1,9 +1,8 @@
 .Toolbar {
   display: flex;
   justify-content: space-between;
-
   background-color: white;
-  box-shadow: 0px 0px 10px rgb(73, 72, 72);
+  box-shadow: 0px 0px 12px rgb(128, 127, 127);
 }
 .Toolbar nav {
   display: none;
