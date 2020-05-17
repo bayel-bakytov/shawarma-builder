@@ -5,7 +5,7 @@
   align-items: center;
 }
 .ShawarmaControl .label {
-  color: #e4002b;
+  color: white;
   font-family: cursive;
   padding: 10px 5px;
   font-size: 20px;
@@ -14,10 +14,10 @@
 .ShawarmaControl button {
   width: 25px;
   height: 25px;
-  border: red 1px solid;
-  color: red;
+  border: white 1px solid;
+  color: black;
   background-color: white;
-  border-radius: 4px;
+  border-radius: 6px;
   cursor: pointer;
   font-size: 18px;
   transform: translateZ(0);
@@ -34,12 +34,12 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: red;
+  background-color: #602b17;
   transform: scaleY(0);
   transform-origin: 50% 100%;
   transition-property: transform;
   transition-duration: 0.3s;
-  border-radius: 4px;
+  border-radius: 6px;
 }
 .ShawarmaControl button:hover,
 .ShawarmaControl button:focus,
