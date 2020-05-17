@@ -5,20 +5,54 @@
   align-items: center;
 }
 .ShawarmaControl .label {
-  color: yellow;
+  color: #e4002b;
   font-family: cursive;
   padding: 10px 5px;
   font-size: 20px;
+  font-family: "Merienda", cursive;
 }
 .ShawarmaControl button {
   width: 25px;
   height: 25px;
-  border: none;
+  border: red 1px solid;
+  color: red;
   background-color: white;
-  color: green;
-  font-weight: bold;
-  border-radius: 50%;
+  border-radius: 4px;
   cursor: pointer;
+  font-size: 18px;
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  transition-duration: 0.3s;
+}
+
+.ShawarmaControl button:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: red;
+  transform: scaleY(0);
+  transform-origin: 50% 100%;
+  transition-property: transform;
+  transition-duration: 0.3s;
+  border-radius: 4px;
+}
+.ShawarmaControl button:hover,
+.ShawarmaControl button:focus,
+.ShawarmaControl button:active {
+  color: white;
+}
+.ShawarmaControl button:hover:before,
+.ShawarmaControl button:focus:before {
+  transform: scaleY(1);
+}
+
+.ShawarmaControl button:focus {
+  outline: none;
 }
 .ShawarmaControl button:disabled {
   opacity: 0.5;

@@ -1,11 +1,10 @@
 .ShawarmaControls {
-  border: 3px solid red;
-  background-color: tomato;
+  border: solid 3px red;
+  background-color: white;
   width: 280px;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   overflow: hidden;
-  border-radius: 0.5rem;
   margin: 8px;
 }
