@@ -1,9 +1,7 @@
 .Ingredients .pita {
-  background-color: rgb(233, 233, 145);
-
   margin: 0 auto;
-  width: 400px;
-  height: 400px;
+  width: 420px;
+  height: 420px;
   margin: 8px;
   align-items: center;
   display: flex;
@@ -11,27 +9,31 @@
   justify-content: center;
   flex-flow: wrap;
   overflow: hidden;
-  border-radius: 100%;
+  background-color: rgb(170, 74, 5);
+  border-radius: 80px;
+  box-shadow: 7px 7px 7px 0px rgba(0, 0, 0, 0.75);
 }
 .Ingredients .ingredientPita {
+  background-color: rgb(233, 233, 145);
   position: relative;
-  width: 360px;
-  height: 360px;
+  width: 380px;
+  height: 380px;
   border-radius: 100%;
   opacity: 1;
   display: flex;
   align-items: center;
   justify-content: space-around;
   flex-flow: column nowrap;
+  box-shadow: 7px 7px 7px 0px rgba(0, 0, 0, 0.35);
 }
 .ingredientPita > .linePita {
-  width: 280px;
+  width: 240px;
   height: 5px;
   border-radius: 5px;
   background-color: #75472d;
 }
 .ingredientPita > .line_Pita {
-  width: 200px;
+  width: 160px;
   height: 5px;
   border-radius: 5px;
   background-color: #75472d;
@@ -47,5 +49,15 @@
   .Ingredients .pita {
     width: 300px;
     height: 300px;
+  }
+  .Ingredients .ingredientPita {
+    width: 280px;
+    height: 280px;
+  }
+  .ingredientPita > .linePita {
+    width: 180px;
+  }
+  .ingredientPita > .line_Pita {
+    width: 120px;
   }
 }

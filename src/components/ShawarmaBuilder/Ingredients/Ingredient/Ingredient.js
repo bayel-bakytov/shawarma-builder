@@ -4,7 +4,7 @@ import classes from "./Ingredient.module.css";
 export default memo(({ type }) => {
   let stylePosition = null;
   const getPosition = (ir) => {
-    const pd = 360;
+    const pd = 380;
     const pr = pd / 2;
 
     const ix = Math.round(Math.random() * pd);
@@ -44,7 +44,7 @@ export default memo(({ type }) => {
       break;
   }
 
-  const position = getPosition(80 / 2);
+  const position = getPosition(100 / 2);
 
   stylePosition = {
     position: "absolute",
