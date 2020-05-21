@@ -3,12 +3,12 @@
   align-items: center;
 }
 .Logo img {
-  height: 80px;
-  width: 80px;
+  height: 70px;
+  width: 70px;
 }
 .Logo span {
   font-family: "Merienda", cursive;
   color: #e4002b;
-  font-size: 30px;
+  font-size: 28px;
   font-weight: bold;
 }
