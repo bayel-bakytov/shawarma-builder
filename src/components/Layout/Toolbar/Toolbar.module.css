@@ -3,6 +3,11 @@
   justify-content: space-between;
   background-color: white;
   box-shadow: 0px 0px 12px rgb(128, 127, 127);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 15;
 }
 .Toolbar nav {
   display: none;
