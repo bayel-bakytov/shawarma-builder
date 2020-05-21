@@ -3,7 +3,7 @@
   display: flex;
   padding: 0;
   margin: 0 10px;
-  flex-direction: row;
+  flex-flow: row;
 }
 @media (max-width: 670px) {
   .Nav {

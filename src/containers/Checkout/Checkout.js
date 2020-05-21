@@ -6,6 +6,7 @@ import classes from "./Checkout.module.css";
 import CheckoutForm from "./CheckoutForm/CheckoutForm";
 import withErroHandler from "../../hoc/withErrorHandler/withErrorHandler";
 import Spinner from "../../components/UI/Spinner/Spinner";
+import image from "../../assets/shawarmaImg.png";
 
 export default withErroHandler(() => {
   const history = useHistory();
@@ -63,6 +64,7 @@ export default withErroHandler(() => {
         checkoutCancel={checkoutCancel}
         checkoutContinue={checkoutContinue}
       />
+      <img src={image} alt="Shawarma Builder " />
       <Route path="/checkout/form">{formOutput}</Route>
     </div>
   );

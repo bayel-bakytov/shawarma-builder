@@ -2,25 +2,25 @@
   display: flex;
   align-items: center;
   padding: 8px;
-  height: 80px;
+  height: 70px;
   text-decoration: none;
   font-family: "Merienda", cursive;
   color: #e4002b;
-  font-size: 20px;
+  font-size: 1rem;
   border-bottom: 3px solid transparent;
   transition: all 0.4s ease-in-out;
 }
 .NavItem a:hover {
   border-color: #e4002b;
-  background-color: rgba(255, 255, 2555, 0.3);
+  background-color: rgba(61, 60, 60, 0.1);
 }
 .NavItem .active {
   border-color: #e4002b;
-  background-color: rgba(255, 255, 2555, 0.1);
+  background-color: rgba(61, 60, 60, 0.1);
 }
-@media (max-width: 670px) {
+@media (max-width: 630px) {
   .NavItem a {
     border: none;
-    border-left: 5px solid transparent;
+    border-left: 3px solid transparent;
   }
 }
