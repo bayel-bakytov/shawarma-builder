@@ -14,19 +14,11 @@ const CONTROLS = [
   { label: "Ketchup", type: "ketchup" },
 ];
 
-export default ({
-  ingredients,
-  addIngredient,
-  removeIngredient,
-  canOrder,
-  startOrder,
-}) => {
+export default ({ ingredients, canOrder, startOrder }) => {
   const controlsOutput = CONTROLS.map((control) => (
     <ShawarmaControl
       key={control.type}
       control={control}
-      addIngredient={addIngredient}
-      removeIngredient={removeIngredient}
       disabled={ingredients[control.type] === 0}
     />
   ));

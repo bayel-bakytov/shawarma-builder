@@ -3,7 +3,7 @@ import classes from "./ShawarmaControl.module.css";
 import { useDispatch } from "react-redux";
 import { ADD_INGREDIENT, REMOVE_INGREDIENT } from "../../../../store/actions";
 
-export default ({ control, addIngredient, removeIngredient, disabled }) => {
+export default ({ control, disabled }) => {
   const dispatch = useDispatch();
 
   return (

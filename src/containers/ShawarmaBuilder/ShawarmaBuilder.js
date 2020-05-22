@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import Ingredients from "../../components/ShawarmaBuilder/Ingredients/Ingredients";
 import classes from "./ShawarmaBuilder.module.css";
@@ -23,24 +23,13 @@ const PRICES = {
 
 export default withErrorHandler(() => {
   const { ingredients, price } = useSelector((state) => state);
-  const [canOrder, setCanOrder] = useState(false);
+
+  const canOrder = Object.values(ingredients).reduce((canOrder, number) => {
+    return !canOrder ? number > 0 : canOrder;
+  }, false);
+
   const [isOrdering, setIsOrdering] = useState(false);
   const history = useHistory();
-
-  function checkCanOrder(ingredients) {
-    const total = Object.keys(ingredients).reduce((total, ingredient) => {
-      return total + ingredients[ingredient];
-    }, 0);
-    setCanOrder(total > 0);
-  }
-
-  function startOrder() {
-    setIsOrdering(true);
-  }
-
-  function cancelOrder() {
-    setIsOrdering(false);
-  }
 
   function finishOrder() {
     const queryParams = Object.keys(ingredients).map(
@@ -57,27 +46,6 @@ export default withErrorHandler(() => {
     });
   }
 
-  function addIngredient(type) {
-    const newIngredients = { ...ingredients };
-    newIngredients[type]++;
-    //setIngredients(newIngredients);
-    checkCanOrder(newIngredients);
-
-    //const newPrice = price + PRICES[type];
-    //setPrice(newPrice);
-  }
-
-  function removeIngredient(type) {
-    if (ingredients[type] >= 1) {
-      const newIngredients = { ...ingredients };
-      newIngredients[type]--;
-      //setIngredients(newIngredients);
-      checkCanOrder(newIngredients);
-
-      //const newPrice = price - PRICES[type];
-      //setPrice(newPrice);
-    }
-  }
   /*
   useEffect(() => {
     axios
@@ -93,11 +61,9 @@ export default withErrorHandler(() => {
       <>
         <Ingredients price={price} ingredients={ingredients} />
         <ShawarmaControls
-          startOrder={startOrder}
+          startOrder={() => setIsOrdering(true)}
           canOrder={canOrder}
           ingredients={ingredients}
-          addIngredient={addIngredient}
-          removeIngredient={removeIngredient}
         />
       </>
     );
@@ -109,7 +75,7 @@ export default withErrorHandler(() => {
       <OrderSummary
         price={price}
         ingredients={ingredients}
-        cancelOrder={cancelOrder}
+        cancelOrder={() => setIsOrdering(false)}
         finishOrder={finishOrder}
       />
     );
@@ -118,7 +84,7 @@ export default withErrorHandler(() => {
     <div className={classes.ShawarmaBuilder}>
       <h1>Build your shawarma</h1>
       {output}
-      <Modal show={isOrdering} hideCallback={cancelOrder}>
+      <Modal show={isOrdering} hideCallback={() => setIsOrdering(false)}>
         {orderSummary}
       </Modal>
     </div>
