@@ -22,8 +22,7 @@ const PRICES = {
 };
 
 export default withErrorHandler(() => {
-  const { ingredients } = useSelector((state) => state);
-  const [price, setPrice] = useState(10);
+  const { ingredients, price } = useSelector((state) => state);
   const [canOrder, setCanOrder] = useState(false);
   const [isOrdering, setIsOrdering] = useState(false);
   const history = useHistory();
@@ -64,8 +63,8 @@ export default withErrorHandler(() => {
     //setIngredients(newIngredients);
     checkCanOrder(newIngredients);
 
-    const newPrice = price + PRICES[type];
-    setPrice(newPrice);
+    //const newPrice = price + PRICES[type];
+    //setPrice(newPrice);
   }
 
   function removeIngredient(type) {
@@ -75,8 +74,8 @@ export default withErrorHandler(() => {
       //setIngredients(newIngredients);
       checkCanOrder(newIngredients);
 
-      const newPrice = price - PRICES[type];
-      setPrice(newPrice);
+      //const newPrice = price - PRICES[type];
+      //setPrice(newPrice);
     }
   }
   /*
