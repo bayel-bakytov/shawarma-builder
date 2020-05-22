@@ -10,7 +10,9 @@ export default ({ control, addIngredient, removeIngredient, disabled }) => {
     <div className={classes.ShawarmaControl}>
       <button
         className={classes.less}
-        onClick={() => dispatch({ type: REMOVE_INGREDIENT })}
+        onClick={() =>
+          dispatch({ type: REMOVE_INGREDIENT, ingredient: control.type })
+        }
         disabled={disabled}
       >
         -
@@ -18,7 +20,9 @@ export default ({ control, addIngredient, removeIngredient, disabled }) => {
       <span className={classes.label}>{control.label}</span>
       <button
         className={classes.more}
-        onClick={() => dispatch({ type: ADD_INGREDIENT })}
+        onClick={() =>
+          dispatch({ type: ADD_INGREDIENT, ingredient: control.type })
+        }
       >
         +
       </button>
