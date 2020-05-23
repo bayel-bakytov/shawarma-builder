@@ -31,21 +31,6 @@ export default withErrorHandler(() => {
   const [isOrdering, setIsOrdering] = useState(false);
   const history = useHistory();
 
-  function finishOrder() {
-    const queryParams = Object.keys(ingredients).map(
-      (ingredient) =>
-        encodeURIComponent(ingredient) +
-        "=" +
-        encodeURIComponent(ingredients[ingredient])
-    );
-    queryParams.push("price=" + encodeURIComponent(price.toFixed(2)));
-
-    history.push({
-      pathname: "/checkout",
-      search: queryParams.join("&"),
-    });
-  }
-
   /*
   useEffect(() => {
     axios
@@ -76,7 +61,7 @@ export default withErrorHandler(() => {
         price={price}
         ingredients={ingredients}
         cancelOrder={() => setIsOrdering(false)}
-        finishOrder={finishOrder}
+        finishOrder={() => history.push("/checkout")}
       />
     );
   }
