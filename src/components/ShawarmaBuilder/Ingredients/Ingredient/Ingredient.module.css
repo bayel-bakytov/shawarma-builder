@@ -10,8 +10,8 @@
 }
 .tomato {
   background-image: url(../../../../assets/tomato.svg);
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
 }
 .cucumber {
   background-image: url(../../../../assets/cucumber.svg);
@@ -24,16 +24,16 @@
 }
 .meat {
   background-image: url(../../../../assets/meat.svg);
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
 }
 .salad {
   background-image: url(../../../../assets/salad.svg);
 }
 .onion {
   background-image: url(../../../../assets/onion.png);
-  height: 55px;
-  width: 55px;
+  height: 50px;
+  width: 50px;
 }
 .ketchup {
   background-image: url(../../../../assets/ketchup.svg);
@@ -44,19 +44,19 @@
 
 @media (max-width: 600px) {
   .Ingredient {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
   }
   .tomato {
-    width: 45px;
-    height: 45px;
+    width: 50px;
+    height: 50px;
   }
   .cucumber {
-    width: 35px;
-    height: 35px;
+    width: 50px;
+    height: 50px;
   }
   .frenchFries {
-    width: 45px;
-    height: 45px;
+    width: 50px;
+    height: 50px;
   }
 }

@@ -6,3 +6,9 @@
   justify-content: center;
   margin-top: 70px;
 }
+@media (max-width: 600px) {
+  img {
+    width: 326px;
+    height: 166px;
+  }
+}

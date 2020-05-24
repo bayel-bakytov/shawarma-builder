@@ -4,7 +4,7 @@ import classes from "./Ingredient.module.css";
 export default memo(({ type }) => {
   let stylePosition = null;
   const getPosition = (ir) => {
-    const pd = 380;
+    const pd = 280;
     const pr = pd / 2;
 
     const ix = Math.round(Math.random() * pd);
