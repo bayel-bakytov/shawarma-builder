@@ -27,3 +27,12 @@
 .CheckoutForm button {
   margin: 1em 0;
 }
+@media (max-width: 600px) {
+  .CheckoutForm input,
+  .CheckoutForm select {
+    min-width: 280px;
+  }
+  .CheckoutForm {
+    padding: 7px 7px 0 7px;
+  }
+}
