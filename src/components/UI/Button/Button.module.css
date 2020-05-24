@@ -3,15 +3,14 @@
   background-color: green;
   color: white;
   font-weight: bold;
-  border-radius: 20px;
+  border-radius: 5px;
   cursor: pointer;
   padding: 5px 15px;
   font-size: 18px;
   text-transform: uppercase;
-  text-shadow: 0 -2px #669644;
-
   transition: all 1s;
   margin-bottom: 8px;
+  margin-right: 5px;
 }
 .Button:active {
   border-bottom: 1px solid;
@@ -27,9 +26,11 @@
   background-color: rgb(55, 146, 55);
   color: white;
   border-bottom: 5px solid rgb(86, 206, 96);
+  border-radius: 5px;
 }
 .red {
   background-color: red;
   color: white;
   border-bottom: 5px solid rgb(233, 68, 68);
+  border-radius: 5px;
 }
