@@ -5,6 +5,8 @@
   background-color: rgb(170, 74, 5);
   padding: 20px 20px 0 20px;
   box-shadow: 7px 7px 7px 0px rgba(0, 0, 0, 0.75);
+  margin-bottom: 25px;
+  margin-top: 10px;
 }
 .CheckoutForm input,
 .CheckoutForm select {
@@ -12,7 +14,7 @@
   border: 0;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3) inset;
   box-shadow: 7px 7px 7px 0px rgba(0, 0, 0, 0.3);
-  border-radius: 1em;
+  border-radius: 0.5em;
   font-size: 1.2rem;
   min-width: 400px;
   margin-bottom: 0.5em;

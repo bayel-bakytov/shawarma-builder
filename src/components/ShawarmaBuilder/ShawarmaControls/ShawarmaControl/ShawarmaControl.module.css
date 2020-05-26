@@ -24,6 +24,7 @@
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   position: relative;
   transition-duration: 0.3s;
+  margin: 5px;
 }
 
 .ShawarmaControl button:before {
