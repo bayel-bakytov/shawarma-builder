@@ -3,23 +3,13 @@ import classes from "./ShawarmaControls.module.css";
 import ShawarmaControl from "./ShawarmaControl/ShawarmaControl";
 import Button from "../../UI/Button/Button";
 
-const CONTROLS = [
-  { label: "Tomato", type: "tomato" },
-  { label: "Cucumber", type: "cucumber" },
-  { label: "French-Fries", type: "frenchFries" },
-  { label: "Meat", type: "meat" },
-  { label: "Salad", type: "salad" },
-  { label: "Cheese", type: "cheese" },
-  { label: "Onion", type: "onion" },
-  { label: "Ketchup", type: "ketchup" },
-];
-
 export default ({ ingredients, canOrder, startOrder }) => {
-  const controlsOutput = CONTROLS.map((control) => (
+  const controlsOutput = Object.keys(ingredients).map((ingredient) => (
     <ShawarmaControl
-      key={control.type}
-      control={control}
-      disabled={ingredients[control.type] === 0}
+      key={ingredient}
+      ingredient={ingredient}
+      label={ingredients[ingredient].label}
+      disabled={ingredients[ingredient].quantity === 0}
     />
   ));
 
