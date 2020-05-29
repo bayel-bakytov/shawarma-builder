@@ -37,6 +37,7 @@ export default (state = intialState, action) => {
       return {
         ...state,
         ingredients: action.ingredients,
+        price: intialState.price,
       };
 
     default:

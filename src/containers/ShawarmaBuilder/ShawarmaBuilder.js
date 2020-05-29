@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { load } from "../../store/actions/builder";
 import Ingredients from "../../components/ShawarmaBuilder/Ingredients/Ingredients";
 import classes from "./ShawarmaBuilder.module.css";
 import ShawarmaControls from "../../components/ShawarmaBuilder/ShawarmaControls/ShawarmaControls";
@@ -8,19 +10,6 @@ import OrderSummary from "../../components/ShawarmaBuilder/OrderSummary/OrderSum
 import axios from "../../axios";
 import Spinner from "../../components/UI/Spinner/Spinner";
 import withErrorHandler from "../../hoc/withErrorHandler/withErrorHandler";
-import { useSelector, useDispatch } from "react-redux";
-import { load } from "../../store/actions/builder";
-
-const PRICES = {
-  cucumber: 3.5,
-  tomato: 4.5,
-  frenchFries: 11.5,
-  cheese: 8.4,
-  salad: 6.5,
-  meat: 9.5,
-  onion: 3,
-  ketchup: 1,
-};
 
 export default withErrorHandler(() => {
   const { ingredients, price } = useSelector((state) => state);
