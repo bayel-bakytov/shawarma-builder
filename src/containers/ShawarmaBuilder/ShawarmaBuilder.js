@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import Ingredients from "../../components/ShawarmaBuilder/Ingredients/Ingredients";
 import classes from "./ShawarmaBuilder.module.css";
@@ -8,7 +8,8 @@ import OrderSummary from "../../components/ShawarmaBuilder/OrderSummary/OrderSum
 import axios from "../../axios";
 import Spinner from "../../components/UI/Spinner/Spinner";
 import withErrorHandler from "../../hoc/withErrorHandler/withErrorHandler";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { load } from "../../store/actions/builder";
 
 const PRICES = {
   cucumber: 3.5,
@@ -25,22 +26,21 @@ export default withErrorHandler(() => {
   const { ingredients, price } = useSelector((state) => state);
   const [isOrdering, setIsOrdering] = useState(false);
   const history = useHistory();
+  const dispatch = useDispatch();
 
-  const canOrder = Object.values(ingredients).reduce((canOrder, ingredient) => {
-    return !canOrder ? ingredient.quantity > 0 : canOrder;
-  }, false);
-
-  /*
   useEffect(() => {
-    axios
-      .get("/ingredients.json")
-      .then((response) => setIngredients(response.data))
-      .catch((error) => {});
-  }, []);
-  */
+    load(dispatch);
+  }, [dispatch]);
 
   let output = <Spinner />;
   if (ingredients) {
+    const canOrder = Object.values(ingredients).reduce(
+      (canOrder, ingredient) => {
+        return !canOrder ? ingredient.quantity > 0 : canOrder;
+      },
+      false
+    );
+
     output = (
       <>
         <Ingredients price={price} ingredients={ingredients} />
@@ -49,28 +49,22 @@ export default withErrorHandler(() => {
           canOrder={canOrder}
           ingredients={ingredients}
         />
+        <Modal show={isOrdering} hideCallback={() => setIsOrdering(false)}>
+          <OrderSummary
+            price={price}
+            ingredients={ingredients}
+            cancelOrder={() => setIsOrdering(false)}
+            finishOrder={() => history.push("/checkout")}
+          />
+        </Modal>
       </>
     );
   }
 
-  let orderSummary = <Spinner />;
-  if (isOrdering) {
-    orderSummary = (
-      <OrderSummary
-        price={price}
-        ingredients={ingredients}
-        cancelOrder={() => setIsOrdering(false)}
-        finishOrder={() => history.push("/checkout")}
-      />
-    );
-  }
   return (
     <div className={classes.ShawarmaBuilder}>
       <h1>Build your shawarma</h1>
       {output}
-      <Modal show={isOrdering} hideCallback={() => setIsOrdering(false)}>
-        {orderSummary}
-      </Modal>
     </div>
   );
 }, axios);
