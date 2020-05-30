@@ -1,21 +1,10 @@
 import React from "react";
 import classes from "./Order.module.css";
 
-const CONTROLS = {
-  tomato: "Tomato",
-  cucumber: "Cucumber",
-  frenchFries: "French",
-  meat: "Meat",
-  salad: "Salad",
-  cheese: "Cheese",
-  onion: "Onion",
-  ketchup: "Ketchup",
-};
-
 export default ({ price, ingredients, details }) => {
-  const ingredientsOutput = Object.keys(ingredients).map((key) => (
-    <span key={key} className={classes.ingredient}>
-      {CONTROLS[key]} ({ingredients[key]})
+  const ingredientsOutput = Object.keys(ingredients).map((ingredient) => (
+    <span key={ingredient} className={classes.ingredient}>
+      {ingredients[ingredient].label} ({ingredients[ingredient].quantity})
     </span>
   ));
 

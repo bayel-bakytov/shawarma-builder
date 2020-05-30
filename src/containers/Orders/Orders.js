@@ -6,7 +6,7 @@ import classes from "./Orders.module.css";
 import Spinner from "../../components/UI/Spinner/Spinner";
 
 export default withErrorHandler(() => {
-  const [orders, setOrders] = useState(null);
+  const [orders, setOrders] = useState(false);
 
   useEffect(() => {
     axios
@@ -18,10 +18,13 @@ export default withErrorHandler(() => {
   }, []);
 
   let ordersOutput = <Spinner />;
-  if (orders !== null) {
+  if (orders) {
     ordersOutput = Object.keys(orders).map((id) => (
       <Order key={id} {...orders[id]} />
     ));
+  }
+  if (orders === null) {
+    ordersOutput = <h3>No orders found</h3>;
   }
   return (
     <div className={classes.Orders}>
