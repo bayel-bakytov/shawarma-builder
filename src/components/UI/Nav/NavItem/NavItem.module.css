@@ -8,7 +8,7 @@
   color: #e4002b;
   font-size: 1rem;
   border-bottom: 3px solid transparent;
-  transition: all 0.4s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 .NavItem a:hover {
   border-color: #e4002b;
@@ -18,7 +18,7 @@
   border-color: #e4002b;
   background-color: rgba(61, 60, 60, 0.1);
 }
-@media (max-width: 630px) {
+@media (max-width: 660px) {
   .NavItem a {
     border: none;
     border-left: 3px solid transparent;

@@ -10,3 +10,8 @@
   border-radius: 35px;
   padding-bottom: 10px;
 }
+.ShawarmaControls > BUTTON {
+  background-color: rgb(11, 97, 11);
+  width: 120px;
+  height: 35px;
+}

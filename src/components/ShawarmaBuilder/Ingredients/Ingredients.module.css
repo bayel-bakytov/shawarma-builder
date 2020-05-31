@@ -9,9 +9,9 @@
   justify-content: center;
   flex-flow: wrap;
   overflow: hidden;
-  background-color: rgb(170, 74, 5);
+  background-color: rgb(223, 212, 117);
   border-radius: 80px;
-  box-shadow: 7px 7px 7px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 7px 7px 7px 0px rgba(0, 0, 0, 0.45);
   margin-top: 25px;
 }
 .Ingredients .ingredientPita {
