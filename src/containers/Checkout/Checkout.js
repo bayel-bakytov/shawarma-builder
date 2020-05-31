@@ -10,7 +10,7 @@ import { useSelector } from "react-redux";
 
 export default withErroHandler(() => {
   const history = useHistory();
-  const { ingredients, price } = useSelector((state) => state);
+  const { ingredients, price } = useSelector((state) => state.builder);
   const [loading, setLoading] = useState(false);
 
   function checkoutCancel() {

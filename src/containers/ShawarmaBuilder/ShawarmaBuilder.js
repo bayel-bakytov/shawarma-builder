@@ -12,7 +12,7 @@ import Spinner from "../../components/UI/Spinner/Spinner";
 import withErrorHandler from "../../hoc/withErrorHandler/withErrorHandler";
 
 export default withErrorHandler(() => {
-  const { ingredients, price } = useSelector((state) => state);
+  const { ingredients, price } = useSelector((state) => state.builder);
   const [isOrdering, setIsOrdering] = useState(false);
   const history = useHistory();
   const dispatch = useDispatch();
