@@ -9,9 +9,9 @@ import Modal from "../../components/UI/Modal/Modal";
 import OrderSummary from "../../components/ShawarmaBuilder/OrderSummary/OrderSummary";
 import axios from "../../axios";
 import Spinner from "../../components/UI/Spinner/Spinner";
-import withErrorHandler from "../../hoc/withErrorHandler/withErrorHandler";
+import withAxios from "../../hoc/withAxios/withAxios";
 
-export default withErrorHandler(() => {
+export default withAxios(() => {
   const { ingredients, price } = useSelector((state) => state.builder);
   const [isOrdering, setIsOrdering] = useState(false);
   const history = useHistory();
