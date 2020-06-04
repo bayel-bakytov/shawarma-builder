@@ -27,3 +27,6 @@
 .Auth button {
   margin: 1em 0;
 }
+.Auth .error {
+  color: red;
+}
