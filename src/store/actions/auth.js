@@ -1,4 +1,4 @@
-import { AUTH_SUCCESS, AUTH_FAIL, AUTH_START } from "./types";
+import { AUTH_SUCCESS, AUTH_FAIL, AUTH_START, AUTH_LOGOUT } from "./types";
 import axios from "axios";
 
 export const start = (dispatch) =>
@@ -18,6 +18,15 @@ export const fail = (dispatch, error) =>
     type: AUTH_FAIL,
     error,
   });
+
+export const logout = (dispatch) =>
+  dispatch({
+    type: AUTH_LOGOUT,
+  });
+
+export const timeout = (dispatch, seconds) =>
+  setTimeout(() => logout(dispatch), seconds * 1000);
+
 const key = "AIzaSyBHe05t_0ehrMHZGdxRyTAPO0j_bOAI25c";
 const signUpUrl =
   "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=" + key;
@@ -31,5 +40,8 @@ export const auth = (dispatch, method, email, password) =>
       password,
       returnSecureToken: true,
     })
-    .then(({ data }) => success(dispatch, data))
+    .then(({ data }) => {
+      success(dispatch, data);
+      timeout(dispatch, +data.expiresIn);
+    })
     .catch((error) => fail(dispatch, error));
