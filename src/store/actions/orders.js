@@ -7,8 +7,8 @@ export const set = (dispatch, orders) =>
     orders,
   });
 
-export const load = (dispatch) =>
+export const load = (dispatch, token) =>
   axios
-    .get("/orders.json")
+    .get("/orders.json?auth=" + token)
     .then(({ data }) => set(dispatch, data))
     .catch(() => {});
