@@ -26,6 +26,10 @@ const signInUrl =
   key;
 export const auth = (dispatch, method, email, password) =>
   axios
-    .post(method === "signin" ? signInUrl : signUpUrl, { email, password })
+    .post(method === "signin" ? signInUrl : signUpUrl, {
+      email,
+      password,
+      returnSecureToken: true,
+    })
     .then(({ data }) => success(dispatch, data))
     .catch((error) => fail(dispatch, error));
