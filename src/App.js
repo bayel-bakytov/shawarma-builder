@@ -12,7 +12,9 @@ import "./App.css";
 
 export default () => {
   const dispatch = useDispatch();
-  useEffect(() => restore(dispatch));
+  useEffect(() => {
+    restore(dispatch);
+  }, [dispatch]);
 
   return (
     <div className="App">
