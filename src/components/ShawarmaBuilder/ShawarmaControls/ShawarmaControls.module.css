@@ -13,7 +13,7 @@
 .ShawarmaControls > BUTTON {
   background-color: rgb(12, 117, 12);
   width: 120px;
-  height: 45px;
+  height: 40px;
   opacity: 1;
 }
 .ShawarmaControls > BUTTON:hover {
