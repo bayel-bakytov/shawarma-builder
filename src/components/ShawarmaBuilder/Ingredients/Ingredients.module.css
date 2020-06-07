@@ -26,6 +26,7 @@
   justify-content: space-around;
   flex-flow: column nowrap;
   box-shadow: 7px 7px 7px 0px rgba(0, 0, 0, 0.35);
+  border: 1px double #75472d;
 }
 .ingredientPita > .linePita {
   width: 200px;

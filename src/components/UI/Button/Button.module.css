@@ -25,16 +25,16 @@
   opacity: 0.8;
 }
 .green {
-  background-color: rgb(55, 146, 55);
+  background-color: rgb(19, 97, 19);
   color: white;
-  border-bottom: 5px solid rgb(86, 206, 96);
-  border-radius: 5px;
+  border-bottom: 5px solid rgb(9, 77, 15);
+  border-radius: 3px;
   margin-left: 10px;
 }
 .red {
-  background-color: red;
+  background-color: rgba(255, 0, 0, 0.8);
   color: white;
-  border-bottom: 5px solid rgb(233, 68, 68);
-  border-radius: 5px;
+  border-bottom: 5px solid rgb(245, 22, 22);
+  border-radius: 3px;
   margin-left: 10px;
 }
