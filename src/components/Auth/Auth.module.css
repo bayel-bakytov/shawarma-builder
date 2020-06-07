@@ -30,6 +30,8 @@
 }
 .Auth .error {
   color: red;
+  margin-bottom: 0;
+  margin-top: 70px;
 }
 .Auth button {
   width: 250px;

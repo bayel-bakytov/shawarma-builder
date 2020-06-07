@@ -30,6 +30,10 @@
 .CheckoutForm button {
   margin: 1em 0;
 }
+.CheckoutForm > BUTTON {
+  width: 300px;
+  align-self: center;
+}
 @media (max-width: 600px) {
   .CheckoutForm input,
   .CheckoutForm select {
