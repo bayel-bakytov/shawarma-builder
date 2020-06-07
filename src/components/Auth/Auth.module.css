@@ -13,12 +13,13 @@
 }
 .Auth input {
   padding: 0.5em 1em;
-  border: 0;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3) inset;
-  border-radius: 1em;
+  border: 1px solid rgb(187, 185, 185);
+  box-shadow: 7px 7px 7px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 0.3em;
   font-size: 1.2rem;
-  max-width: 480px;
+  width: 350px;
   margin-top: 0.5em;
+  background: white;
 }
 .Auth input:focus {
   outline: none;
@@ -29,4 +30,16 @@
 }
 .Auth .error {
   color: red;
+}
+.Auth button {
+  width: 250px;
+  align-self: center;
+}
+@media (max-width: 600px) {
+  .Auth input {
+    width: 270px;
+  }
+  .Auth button {
+    width: 150px;
+  }
 }
