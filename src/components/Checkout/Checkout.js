@@ -7,6 +7,7 @@ import CheckoutForm from "./CheckoutForm/CheckoutForm";
 import withAxios from "../../hoc/withAxios/withAxios";
 import Spinner from "../UI/Spinner/Spinner";
 import { useSelector } from "react-redux";
+import img from "../../assets/shawarmaImg.png";
 
 export default withAxios(({ loading }) => {
   const history = useHistory();
@@ -51,6 +52,7 @@ export default withAxios(({ loading }) => {
   return (
     <div className={classes.Checkout}>
       {summaryOutput}
+      <img src={img} alt="Shawarna Img" />
       <Route path="/checkout/form">{formOutput}</Route>
     </div>
   );
