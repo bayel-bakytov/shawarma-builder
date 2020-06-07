@@ -12,6 +12,7 @@
   margin-bottom: 8px;
   margin-right: 5px;
   margin-left: 10px;
+  font-family: "Merienda", cursive;
 }
 .Button:active {
   border-bottom: 1px solid;

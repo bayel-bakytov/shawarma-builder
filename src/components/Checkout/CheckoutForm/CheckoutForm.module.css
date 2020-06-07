@@ -33,7 +33,7 @@
 @media (max-width: 600px) {
   .CheckoutForm input,
   .CheckoutForm select {
-    width: 265px;
+    width: 270px;
   }
   .CheckoutForm {
     padding: 18px 18px 0 18px;
